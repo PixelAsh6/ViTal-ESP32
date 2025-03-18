@@ -15,3 +15,5 @@
 #include "global.h"
 
 #endif
+
+void BUZZER_vChangeDutyCycle (uint32_t u32BuzzerDutyCycle);

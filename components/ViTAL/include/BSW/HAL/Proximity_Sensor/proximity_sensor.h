@@ -17,4 +17,4 @@
 #endif
 
 void PROX_vRequest (void);
-int64_t PROX_u16Read ();
+int64_t PROX_u16Read (void);

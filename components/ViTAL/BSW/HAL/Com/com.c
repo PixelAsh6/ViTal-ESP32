@@ -23,7 +23,7 @@
  
  /* Assign some default values to GET buffer */
  COM_GET_struct g_GET_DataStructure =
- { .u8Temperature = 27, .u8Humidity = 50, .u8Comfort = 24, .bIsLocked = true,
+ { .u8Temperature = 27, .u8Humidity = 50, .u16PhotoRes=0, .u8Comfort = 24, .bIsLocked = true,
 		 .bIsOccupied = false, .u8Distance = 0 };
  
  /* Assign some default values to POST buffer */

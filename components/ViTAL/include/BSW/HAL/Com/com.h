@@ -19,10 +19,11 @@
 	 uint8_t u8Temperature;
 	 uint8_t u8Humidity;
 	 uint8_t u8Comfort;
+     uint8_t u8Distance;
 	 uint16_t u16PhotoRes;
 	 bool bIsLocked;
 	 bool bIsOccupied;
-	 uint8_t u8Distance;
+
  } COM_GET_struct;
  
  typedef struct

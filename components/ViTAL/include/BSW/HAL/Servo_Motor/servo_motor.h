@@ -15,3 +15,5 @@
 #include "global.h"
 
 #endif
+
+void SERVO_vChangeAngle(uint32_t u32ServoAngle);

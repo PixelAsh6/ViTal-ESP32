@@ -13,4 +13,11 @@
 
 #include "BSW/MCAL/PWM/pwm.h"
 
+#define BUZZER_PWM_CHANNEL 2
+
 static const char *TAG = "HAL BUZZER";
+
+void BUZZER_vChangeDutyCycle (uint32_t u32BuzzerDutyCycle)
+{
+    PWM_vSetDutyCycle(BUZZER_PWM_CHANNEL, u32BuzzerDutyCycle);
+}

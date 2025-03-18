@@ -37,11 +37,13 @@ void PROX_vRequest ()
 int64_t PROX_u16Read ()
 {
     PROX_vRequest();
-    int64_t echot1=0, echot2=0, echot=0;
+    int64_t echot1=0, echot2=0;
     while(GPIO_iGetLevel(HC_SR04_ECHO_PIN)==0)
     {
     };
+    
     echot1=esp_timer_get_time();
+    
     while(GPIO_iGetLevel(HC_SR04_ECHO_PIN)==1)
     {
 

@@ -19,7 +19,9 @@
 #include "BSW/HAL/Com/com.h"
 #include "BSW/HAL/Photo_Resistor/photo_resistor.h"
 #include "BSW/HAL/Temp_Sensor/temp_sensor.h"
-
+#include "BSW/HAL/Proximity_Sensor/proximity_sensor.h"
+#include "BSW/HAL/Servo_Motor/servo_motor.h"
+#include "BSW/HAL/Buzzer/buzzer.h"
 #include "RTE/rte.h"
 
 #include "ASW/Ambient_Light/ambient_light.h"
@@ -32,7 +34,7 @@
 #include "BSW/HAL/Shift_Register/shift_register.h"
 #include "nvs_flash.h"
 #include "BSW/HAL/DC_Motor/dc_motor.h"
-#include "BSW/HAL/Proximity_Sensor/proximity_sensor.h"
+
 static const char *TAG = "SRVL SCHEDULER";
 static char *timestamp;
 
@@ -65,12 +67,13 @@ void vTask100ms(void)
 void vTask200ms(void)
 {
 	//ESP_LOGI(TAG, "200ms" );
-	uint8_t distance=PROX_u16Read();
+	uint8_t Distance=PROX_u16Read();
 	//ESP_LOGI(TAG, "%d", distance);
 }
 void vTask500ms(void)
 { 
-	
+	//BUZZER_vChangeDutyCycle (10000);
+	SERVO_vChangeAngle(1500);
 	SHIFTREG_vOutput8Bits(0b10100011);
 }
 void vTask800ms(void)
