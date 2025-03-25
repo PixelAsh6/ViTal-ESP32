@@ -15,3 +15,9 @@
 #include "global.h"
 
 #endif
+
+void DHT11_vRequest (void);
+uint8_t DHT11_vResponse (void);
+uint8_t DHT11_u8Receive (void);
+void DHT11_dht11Read (void);
+void DHT11_vTaskTempAndHumCalculate (void);

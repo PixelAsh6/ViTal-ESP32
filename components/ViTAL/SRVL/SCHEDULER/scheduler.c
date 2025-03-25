@@ -38,6 +38,16 @@
 static const char *TAG = "SRVL SCHEDULER";
 static char *timestamp;
 
+
+
+
+
+int taskexec=0;
+
+
+
+
+
 void SYSTEM_vInit(void)
 {
 	//Initialize NVS
@@ -67,13 +77,17 @@ void vTask100ms(void)
 void vTask200ms(void)
 {
 	//ESP_LOGI(TAG, "200ms" );
-	uint8_t Distance=PROX_u16Read();
+	PROX_u16Read();
 	//ESP_LOGI(TAG, "%d", distance);
 }
 void vTask500ms(void)
 { 
 	//BUZZER_vChangeDutyCycle (10000);
 	SERVO_vChangeAngle(1500);
+	int i=0;
+	if(i==4)
+	
+
 	SHIFTREG_vOutput8Bits(0b10100011);
 }
 void vTask800ms(void)
@@ -84,7 +98,7 @@ void vTask800ms(void)
 }
 
 void vTask1000ms(void)
-{	DCMOT_vChangeSpeed(20000);
+{	//DCMOT_vChangeSpeed(20000);
 	ESP_LOGI(TAG, "1000ms" );
 }
 
